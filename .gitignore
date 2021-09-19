@@ -1,0 +1,20 @@
+.*
+!.gitignore
+!.settings
+!.project
+!.oppbuildspec
+!.nedfolders
+!.nedexclusions
+!.cproject
+!.oppfeatures
+*result*/
+random_config_dir/
+*.anf
+core
+*.db*
+*.pyc
+# distributions/
+src/dc_simulations
+src/dc_simulations_dbg
+perf*
+*/dc_simulations/out/

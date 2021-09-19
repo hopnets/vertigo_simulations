@@ -1,0 +1,24 @@
+
+#
+# This makefile was generated with the following command:
+# /home/sepehr/omnetpp-5.5.1/bin/opp_runall -j3 /home/sepehr/omnetpp-5.5.1/samples/dc_simulations/src/dc_simulations -m -u Cmdenv -c DCTCP_DRILL -n ..:../../src:../../../../../Desktop/inet/src:../../../../../Desktop/inet/examples:../../../../../Desktop/inet/tutorials:../../../../../Desktop/inet/showcases --image-path=../../../../../Desktop/inet/images -l ../../../../../Desktop/inet/src/INET omnetpp_different_scales_pFabric.ini
+#
+
+SIMULATIONCMD = /home/sepehr/omnetpp-5.5.1/samples/dc_simulations/src/dc_simulations -m -u Cmdenv -c DCTCP_DRILL -n ..:../../src:../../../../../Desktop/inet/src:../../../../../Desktop/inet/examples:../../../../../Desktop/inet/tutorials:../../../../../Desktop/inet/showcases --image-path=../../../../../Desktop/inet/images -l ../../../../../Desktop/inet/src/INET omnetpp_different_scales_pFabric.ini -s --cmdenv-redirect-output=true
+TARGETS =  batch0 batch1 batch2
+
+.PHONY: $(TARGETS)
+
+all: $(TARGETS)
+	@echo All runs completed.
+
+batch0:
+	$(SIMULATIONCMD) -r 0,1,2
+
+batch1:
+	$(SIMULATIONCMD) -r 3,4,5
+
+batch2:
+	$(SIMULATIONCMD) -r 6,7,8
+
+
