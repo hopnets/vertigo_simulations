@@ -411,8 +411,9 @@ void BouncingIeee8021dRelay::chooseDispatchType(Packet *packet, InterfaceEntry *
             auto tcpHeader = packet->peekAtFront<tcp::TcpHeader>();
             EV << "S&S: The flow info is: ( src_ip: " << ipHeader->getSourceAddress() << ", dest_ip: " << ipHeader->getDestinationAddress() << ", src_port: " << tcpHeader->getSourcePort() << ", dest_port: " << tcpHeader->getDestinationPort() << " )" << endl;
             EV << "SEPEHR: Switch IS using ECMP for this packet!" << endl;
+            std::string switch_name = getParentModule()->getFullPath();
             std::string header_info = ipHeader->getSourceAddress().str() + ipHeader->getDestinationAddress().str() +
-                    std::to_string(tcpHeader->getSourcePort()) + std::to_string(tcpHeader->getDestinationPort());
+                    std::to_string(tcpHeader->getSourcePort()) + std::to_string(tcpHeader->getDestinationPort()) + switch_name;
             unsigned long header_info_hash = header_hash(header_info);
             EV << "There are " << portNum << " ports and header hash is " << header_info_hash << endl;
             int outputPortNum;
