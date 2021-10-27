@@ -84,7 +84,7 @@ def plot_figs(x, y, labels, markers, colors):
 
 
 # In this case: load
-color = ['k', 'dodgerblue', 'r', 'springgreen']
+colors = ['k', 'dodgerblue', 'r', 'springgreen']
 markers = ['o', 'X', 'v', '|']
 x_values = [35, 55, 75, 95]
 all_flow_completions = []
