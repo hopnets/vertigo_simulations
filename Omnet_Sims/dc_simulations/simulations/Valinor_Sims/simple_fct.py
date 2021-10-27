@@ -69,17 +69,23 @@ class Flow:
         self.record_time = record_time
 
 
-def plot_figs(x, y, labels):
+def plot_figs(x, y, labels, markers, colors):
     if len(y) != len(labels):
         raise Exception("len(y) != len(labels)")
+    if len(markers) != len(y):
+        raise Exception("len(markers) != len(y)")
+    if len(colors) != len(y):
+        raise Exception("len(colors) != len(y)")
     for i in range(len(y)):
-        plt.plot(x, y[i], label=[labels[i]])
+        plt.plot(x, y[i], label=[labels[i]], marker=markers[i], linewidth=6, color=colors[i], markersize=16, markevery=0.08)
     plt.grid()
     plt.xticks(x)
     plt.legend()
 
 
 # In this case: load
+color = ['k', 'dodgerblue', 'r', 'springgreen']
+markers = ['o', 'X', 'v', '|']
 x_values = [35, 55, 75, 95]
 all_flow_completions = []
 all_mean_fct = []
@@ -326,19 +332,19 @@ if len(all_mean_fct[0]) != len(x_values):
 if len(all_tail_fct[0]) != len(x_values):
     raise Exception("len(all_query_completions[0]) != len(x_values)")
 
-# plot_figs(x_values, all_flow_completions, CATEGORIES)
+# plot_figs(x_values, all_flow_completions, CATEGORIES, markers, colors)
 # plt.xlabel('Load (%)')
 # plt.ylabel('Flow Completion %')
 # plt.savefig("figs/{}.png".format('simple_flow_completions'))
 # plt.close()
 
-plot_figs(x_values, all_mean_fct, CATEGORIES)
+plot_figs(x_values, all_mean_fct, CATEGORIES, markers, colors)
 plt.xlabel('Load (%)')
 plt.ylabel('Mean FCT (s)')
 plt.savefig("figs/{}.png".format('simple_mean_fct'))
 plt.close()
 
-plot_figs(x_values, all_tail_fct, CATEGORIES)
+plot_figs(x_values, all_tail_fct, CATEGORIES, markers, colors)
 plt.xlabel('Load (%)')
 plt.ylabel('Tail FCT (s)')
 plt.savefig("figs/{}.png".format('simple_tail_fct'))
