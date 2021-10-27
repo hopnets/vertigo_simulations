@@ -5,15 +5,37 @@ Given the low network utilization in datacenters, one would expect packet deflec
 
 ## Re-producing the simulation results
 
-This repository provides the instructins and files required to run the simulations, extract the results, and plot the figures.We use [Omnet++ simulator](https://omnetpp.org/) and INET framework to run the simulations. [Omnet++ manual](https://doc.omnetpp.org/omnetpp/manual/) and its exmaples are good references for introduction to the simulator. We ran our simulations on Ubuntu machines so all the commands are for Ubuntu.To run the simulations, you should follow the following steps:
+This repository provides the instructins and files required to run the simulations, extract the results, and plot the figures.We use [Omnet++ simulator](https://omnetpp.org/) and INET framework to run the simulations. [Omnet++ manual](https://doc.omnetpp.org/omnetpp/manual/) and its examples are good references for introduction to the simulator. We ran our simulations on Ubuntu machines (version: 18.04) so all the commands are for Ubuntu.To run the simulations, you should follow the following steps:
 
-* Step 1: Install Omnet++
-* Step 2: Install dependencies
+* Step 1: Install dependencies
+* Step 2: Install Omnet++
 * Step 3: Clone the repository
 * Step 4: Build the project
 * Step 5: Run the simulations and extract the results
 
-### Step 1: Installing Omnet++
+### Step 1: Installing dependencies
+
+To successfully install Omnet++ and run the simulations, execute the following commands:
+
+```
+sudo apt update
+sudo apt-get install -y build-essential
+sudo apt-get install -y flex bison
+sudo apt-get install -y zlib1g-dev
+sudo apt-get install -y libxml2-dev
+sudo apt-get install -y python3-matplotlib
+sudo apt install -y sqlite3
+sudo apt-get install -y libsqlite3-dev
+```
+
+Make sure you have python3 installed (if not, run ```sudo apt-get install -y python3```). If it is installed and accessible in "/usr/bin/python3" run the following: 
+
+```
+sudo ln -s /usr/bin/python3 /usr/bin/python
+sudo apt install -y python3-numpy
+```
+
+### Step 2: Installing Omnet++
 
 The complete instructions for installing Omnet++ can be found in [Omnet++ installation guide](https://doc.omnetpp.org/omnetpp/InstallGuide.pdf). **In case you already have the simulator installed, you can skip this step.** To install Omnet++ on an Ubuntu OS, you should run the following commands:
 
@@ -39,16 +61,6 @@ In case, the configure command printed out that "omnetpp-5.6.2/bin" is not added
 
 ```
 make
-```
-
-### Step 2: Installing dependencies
-
-We use sqlite3 in our codes. To install it run the following commands:
-
-```
-sudo apt update
-sudo apt install sqlite3
-sudo apt-get install libsqlite3-dev
 ```
 
 ### Step 3: Cloning the repository

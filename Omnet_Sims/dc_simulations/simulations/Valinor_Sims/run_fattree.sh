@@ -9,6 +9,8 @@ do_extract () {
     sleep 5
 }
 
+rm -rf results
+
 # create the directory to save extracted_results
 bash dir_creator.sh
 
@@ -67,8 +69,5 @@ do_extract tcp_valinor_las_fattree
 
 # move the extracted results
 echo "Moving the extracted results to results_fattree"
+rm -rf results_fattree
 mv extracted_results results_fattree
-
-# deleting raw results
-echo "Deleting raw results"
-rm -rf results

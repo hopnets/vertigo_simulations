@@ -9,6 +9,8 @@ do_extract () {
     sleep 5
 }
 
+rm -rf results
+
 # create the directory to save extracted_results
 bash dir_creator.sh
 
@@ -89,8 +91,5 @@ do_extract tcp_valinor_las
 
 # move the extracted results
 echo "Moving the extracted results to results_25_bg_dqps"
+rm -rf results_25_bg_dqps
 mv extracted_results results_25_bg_dqps
-
-# deleting raw results
-echo "Deleting raw results"
-rm -rf results

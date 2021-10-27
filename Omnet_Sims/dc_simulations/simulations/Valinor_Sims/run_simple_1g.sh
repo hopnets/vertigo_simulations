@@ -9,6 +9,8 @@ do_extract () {
     sleep 5
 }
 
+rm -rf results
+
 # create the directory to save extracted_results
 bash ./dir_creator.sh
 
@@ -35,11 +37,8 @@ do_extract dctcp_valinor
 
 # move the extracted results
 echo "Moving the extracted results to results_sample_1g"
+rm -rf results_sample_1g
 mv extracted_results results_sample_1g
-
-# deleting raw results
-echo "Deleting raw results"
-rm -rf results
 
 # Processing the results
 python3 simple_qct.py 
