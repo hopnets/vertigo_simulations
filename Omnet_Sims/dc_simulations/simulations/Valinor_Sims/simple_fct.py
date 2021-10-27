@@ -326,11 +326,11 @@ if len(all_mean_fct[0]) != len(x_values):
 if len(all_tail_fct[0]) != len(x_values):
     raise Exception("len(all_query_completions[0]) != len(x_values)")
 
-plot_figs(x_values, all_flow_completions, CATEGORIES)
-plt.xlabel('Load (%)')
-plt.ylabel('Flow Completion %')
-plt.savefig("figs/{}.pdf".format('simple_flow_completions'))
-plt.close()
+# plot_figs(x_values, all_flow_completions, CATEGORIES)
+# plt.xlabel('Load (%)')
+# plt.ylabel('Flow Completion %')
+# plt.savefig("figs/{}.pdf".format('simple_flow_completions'))
+# plt.close()
 
 plot_figs(x_values, all_mean_fct, CATEGORIES)
 plt.xlabel('Load (%)')

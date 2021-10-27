@@ -533,11 +533,11 @@ if len(all_mean_qct[0]) != len(x_values):
 if len(all_tail_qct[0]) != len(x_values):
     raise Exception("len(all_query_completions[0]) != len(x_values)")
 
-plot_figs(x_values, all_query_completions, CATEGORIES)
-plt.xlabel('Load (%)')
-plt.ylabel('Query Completion %')
-plt.savefig("figs/{}.pdf".format('simple_query_completions'))
-plt.close()
+# plot_figs(x_values, all_query_completions, CATEGORIES)
+# plt.xlabel('Load (%)')
+# plt.ylabel('Query Completion %')
+# plt.savefig("figs/{}.pdf".format('simple_query_completions'))
+# plt.close()
 
 plot_figs(x_values, all_mean_qct, CATEGORIES)
 plt.xlabel('Load (%)')
