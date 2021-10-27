@@ -50,4 +50,4 @@ mv extracted_results results_sample_1g
 
 # Processing the results
 python3 simple_qct.py 
-
+python3 simple_fct.py

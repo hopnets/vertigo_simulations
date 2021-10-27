@@ -496,7 +496,7 @@ for category in CATEGORIES:
 
                                             query_completions.append((len(qct_info) / len(query_pack))*100)
                                             mean_qct.append(np.mean(qct_info))
-                                            tail_qct.append(np.percentile(qct_info, 99.9))
+                                            tail_qct.append(np.percentile(qct_info, 99))
 
                                             print('Queries, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}'
                                                     .format(0, len(query_pack), len(qct_info),
