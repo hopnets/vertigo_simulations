@@ -1,3 +1,4 @@
+mkdir logs
 mkdir extracted_results
 mkdir extracted_results/FLOW_ENDED
 mkdir extracted_results/FLOW_ENDED_QUERY_ID

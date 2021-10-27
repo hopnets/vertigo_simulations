@@ -19,21 +19,29 @@ echo "\n\n-------------------------------------------"
 echo "Running DCTCP_ECMP"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_ECMP -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET simple_1Gbps.ini
 do_extract dctcp_ecmp
+mkdir logs/dctcp_ecmp_sample_1g
+cp results/*.out logs/dctcp_ecmp_sample_1g/
 
 echo "\n\n-------------------------------------------"
 echo "Running DCTCP_DRILL"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_DRILL -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET simple_1Gbps.ini
 do_extract dctcp_drill
+mkdir logs/dctcp_drill_sample_1g
+cp results/*.out logs/dctcp_drill_sample_1g/
 
 echo "\n\n-------------------------------------------"
 echo "Running DCTCP_DIBS"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_DIBS -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET simple_1Gbps.ini
 do_extract dctcp_dibs
+mkdir logs/dctcp_dctcp_dibs_sample_1g
+cp results/*.out logs/dctcp_dctcp_dibs_sample_1g/
 
 echo "\n\n-------------------------------------------"
 echo "Running DCTCP_VALINOR"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_V_SRPT_SCH_SRPT_ORD -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET simple_1Gbps.ini
 do_extract dctcp_valinor
+mkdir logs/dctcp_valinor_sample_1g
+cp results/*.out logs/dctcp_valinor_sample_1g/
 
 # move the extracted results
 echo "Moving the extracted results to results_sample_1g"
