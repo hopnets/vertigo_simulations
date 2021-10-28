@@ -159,6 +159,20 @@ Queries, 0, 17500, 8005, 45.74285714285714, 1.6087287174550076, 0.7711473605348,
 
 The results above illustrate that, under 95% load, ECMP, DRILL, and DIBS complete 6.77%, 6.69%, and 1.42% of the querries, respectively, while Valinor completes 45.74%.
 
+
+**Viewing the figures**
+
+To view the plotted figures for small simulations, `Jupyter notebook` is required. To install Jupyter using pip simply issue:
+ `pip install jupyterlab`. The notebook file is located in `Omnet_Sims/dc_simulations/simulations/Valinor_Sims/`. To view the notebook in your browser, run:
+ 
+ ` jupyter Omnet_Sims/dc_simulations/simulations/Valinor_Sims/result_illustrator.ipynb`
+ 
+ You can optionally use `--ip x.x.x.x` flag on a public server machine, where x.x.x.x is the public ip address of the server.
+ The notebook compares the small scale simulation results with the large-scale results reported in the main paper.
+
+
+**Running large-scale simulations**
+
 The config files for large scale simulations can be used for evaluating Valinor, DIBS, ECMP, and DRILL while using TCP, DCTCP, and Swift as the transport protocol. Every scenario with these configurations takes 2 to 3 weeks to complete. To run the large scale simulations, first make sure that you are in the right directory ("valinor_simulations/Omnet_Sims/dc_simulations/simulations/Valinor_Sims") and then run the following command to download the distribution files:
 
 ```
