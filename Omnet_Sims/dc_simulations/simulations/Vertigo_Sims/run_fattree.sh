@@ -37,18 +37,18 @@ mkdir logs/dctcp_dctcp_dibs_fattree
 cp results/*.out logs/dctcp_dctcp_dibs_fattree/
 
 echo "\n\n-------------------------------------------"
-echo "Running DCTCP_VALINOR"
-opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_Valinor_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
-do_extract dctcp_valinor_fattree
-mkdir logs/dctcp_valinor_fattree
-cp results/*.out logs/dctcp_valinor_fattree/
+echo "Running DCTCP_VERTIGO"
+opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_Vertigo_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
+do_extract dctcp_vertigo_fattree
+mkdir logs/dctcp_vertigo_fattree
+cp results/*.out logs/dctcp_vertigo_fattree/
 
 echo "\n\n-------------------------------------------"
-echo "Running DCTCP_VALINOR_LAS"
-opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_Valinor_LAS_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
-do_extract dctcp_valinor_las_fattree
-mkdir logs/dctcp_valinor_las_fattree
-cp results/*.out logs/dctcp_valinor_las_fattree/
+echo "Running DCTCP_VERTIGO_LAS"
+opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_Vertigo_LAS_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
+do_extract dctcp_vertigo_las_fattree
+mkdir logs/dctcp_vertigo_las_fattree
+cp results/*.out logs/dctcp_vertigo_las_fattree/
 
 
 # TCP RUNS
@@ -74,18 +74,18 @@ mkdir logs/tcp_dibs_fattree
 cp results/*.out logs/tcp_dibs_fattree/
 
 echo "\n\n-------------------------------------------"
-echo "Running TCP_VALINOR"
-opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_VALINOR_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
-do_extract tcp_valinor_fattree
-mkdir logs/tcp_valinor_fattree
-cp results/*.out logs/tcp_valinor_fattree/
+echo "Running TCP_VERTIGO"
+opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_Vertigo_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
+do_extract tcp_vertigo_fattree
+mkdir logs/tcp_vertigo_fattree
+cp results/*.out logs/tcp_vertigo_fattree/
 
 echo "\n\n-------------------------------------------"
-echo "Running TCP_VALINOR_LAS"
-opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_VALINOR_LAS_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
-do_extract tcp_valinor_las_fattree
-mkdir logs/tcp_valinor_las_fattree
-cp results/*.out logs/tcp_valinor_las_fattree/
+echo "Running TCP_VERTIGO_LAS"
+opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_VERTIGO_LAS_fattree -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_fattree.ini
+do_extract tcp_vertigo_las_fattree
+mkdir logs/tcp_vertigo_las_fattree
+cp results/*.out logs/tcp_vertigo_las_fattree/
 
 # move the extracted results
 echo "Moving the extracted results to results_fattree"

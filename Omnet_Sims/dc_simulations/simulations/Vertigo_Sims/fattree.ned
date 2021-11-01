@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package dc_simulations.simulations.Valinor_Sims;
+package dc_simulations.simulations.Vertigo_Sims;
 
 import inet.networklayer.common.InterfaceTable;
 import inet.networklayer.arp.ipv4.GlobalArp;

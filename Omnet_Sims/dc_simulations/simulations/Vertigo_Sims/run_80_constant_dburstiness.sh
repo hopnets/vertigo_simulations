@@ -37,18 +37,18 @@ mkdir logs/dctcp_dctcp_dibs_80_constant_dburstiness
 cp results/*.out logs/dctcp_dctcp_dibs_80_constant_dburstiness/
 
 echo "\n\n-------------------------------------------"
-echo "Running DCTCP_VALINOR"
+echo "Running DCTCP_VERTIGO"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_V_SRPT_SCH_SRPT_ORD -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
-do_extract dctcp_valinor
-mkdir logs/dctcp_valinor_80_constant_dburstiness
-cp results/*.out logs/dctcp_valinor_80_constant_dburstiness/
+do_extract dctcp_vertigo
+mkdir logs/dctcp_vertigo_80_constant_dburstiness
+cp results/*.out logs/dctcp_vertigo_80_constant_dburstiness/
 
 echo "\n\n-------------------------------------------"
-echo "Running DCTCP_VALINOR_LAS"
+echo "Running DCTCP_VERTIGO_LAS"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c DCTCP_V_LAS_SCH_LAS_ORD -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
-do_extract dctcp_valinor_las
-mkdir logs/dctcp_valinor_las_80_constant_dburstiness
-cp results/*.out logs/dctcp_valinor_las_80_constant_dburstiness/
+do_extract dctcp_vertigo_las
+mkdir logs/dctcp_vertigo_las_80_constant_dburstiness
+cp results/*.out logs/dctcp_vertigo_las_80_constant_dburstiness/
 
 
 # SWIFT RUNS
@@ -74,11 +74,11 @@ mkdir logs/swfit_dibs_80_constant_dburstiness
 cp results/*.out logs/swfit_dibs_80_constant_dburstiness/
 
 echo "\n\n-------------------------------------------"
-echo "Running Swift_VALINOR"
-opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c Swift_Valinor -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
-do_extract swfit_valinor
-mkdir logs/swfit_valinor_80_constant_dburstiness
-cp results/*.out logs/swfit_valinor_80_constant_dburstiness/
+echo "Running Swift_VERTIGO"
+opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c Swift_Vertigo -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
+do_extract swfit_vertigo
+mkdir logs/swfit_vertigo_80_constant_dburstiness
+cp results/*.out logs/swfit_vertigo_80_constant_dburstiness/
 
 
 # TCP RUNS
@@ -104,18 +104,18 @@ mkdir logs/tcp_dibs_80_constant_dburstiness
 cp results/*.out logs/tcp_dibs_80_constant_dburstiness/
 
 echo "\n\n-------------------------------------------"
-echo "Running TCP_VALINOR"
+echo "Running TCP_VERTIGO"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_V_SRPT_SCH_SRPT_ORD -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
-do_extract tcp_valinor
-mkdir logs/tcp_valinor_80_constant_dburstiness
-cp results/*.out logs/tcp_valinor_80_constant_dburstiness/
+do_extract tcp_vertigo
+mkdir logs/tcp_vertigo_80_constant_dburstiness
+cp results/*.out logs/tcp_vertigo_80_constant_dburstiness/
 
 echo "\n\n-------------------------------------------"
-echo "Running TCP_VALINOR_LAS"
+echo "Running TCP_VERTIGO_LAS"
 opp_runall -j50 ../../src/dc_simulations -m -u Cmdenv -c TCP_V_LAS_SCH_LAS_ORD -n ..:../../src:../../../inet/src:../../../inet/examples:../../../inet/tutorials:../../../inet/showcases --image-path=../../../inet/images -l ../../../inet/src/INET omnetpp_80_constant_dburstiness.ini
-do_extract tcp_valinor_las
-mkdir logs/tcp_valinor_las_80_constant_dburstiness
-cp results/*.out logs/tcp_valinor_las_80_constant_dburstiness/
+do_extract tcp_vertigo_las
+mkdir logs/tcp_vertigo_las_80_constant_dburstiness
+cp results/*.out logs/tcp_vertigo_las_80_constant_dburstiness/
 
 # move the extracted results
 echo "Moving the extracted results to results_80_constant_dburstiness"

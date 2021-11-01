@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for dc_simulations
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -KINET_PROJ=/home/sepehr/Desktop/inet -KDC_SIMULATIONS_PROJ=.. -DINET_IMPORT -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lsqlite3 -lINET$$\(D\)
+#  opp_makemake -f --deep -KINET_PROJ=../../inet -KDC_SIMULATIONS_PROJ=.. -DINET_IMPORT -I/home/sepehr/Desktop/inet/src -I/home/sepehr/omnetpp-5.5.1/src/common -L$$\(INET_PROJ\)/src -lsqlite3 -lINET$$\(D\)
 #
 
 # Name of target to be created (-o option)
@@ -16,7 +16,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(QTENV_LIBS) $(CMDENV_LI
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I$(INET_PROJ)/src
+INCLUDE_PATH = -I/home/sepehr/Desktop/inet/src -I/home/sepehr/omnetpp-5.5.1/src/common
 
 # Additional object and library files to link with
 EXTRA_OBJS =

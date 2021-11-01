@@ -1,4 +1,4 @@
-# Valinor Omnet++ simulation files
+# Vertigo Omnet++ simulation files
 
 ## Re-producing the simulation results
 
@@ -65,7 +65,7 @@ make
 To clone the repository, run the following script:
 
 ```
-git clone https://github.com/hopnets/valinor_simulations.git
+git clone https://github.com/hopnets/vertigo_simulations.git
 ```
 
 ### Step 4: Building the project
@@ -73,7 +73,7 @@ git clone https://github.com/hopnets/valinor_simulations.git
 We have provided a ```build.sh``` shell script to simplify this process. To build the project modules, run the following scripts:
 
 ```
-cd valinor_simulations/Omnet_Sims/
+cd vertigo_simulations/Omnet_Sims/
 ./build.sh
 ```
 
@@ -86,7 +86,7 @@ Considering that running the simulations included in the paper takes a long time
 We have provided bash scripts for running both these sets and extracting their results. We have also included a sample python file which is used to process the extracted results of the small scale simulations and compute the Query Completion Times (QCTs) and Flow Completion Times (FCTs). To run the small scale simulations, extract their results, and perform the measurements, run the following commands:
 
 ```
-cd dc_simulations/simulations/Valinor_Sims
+cd dc_simulations/simulations/Vertigo_Sims
 bash download_dist_files_1g.sh
 bash run_simple_1g.sh 
 ```
@@ -95,7 +95,7 @@ The commands above, download the distribution files for the small scale simulati
 * DCTCP + ECMP
 * DCTCP + DRILL
 * DCTCP + DIBS
-* DCTCP + Valinor
+* DCTCP + Vertigo
 
 Every scenario is expected to take less than 3 hours. After the simulations are over, our bash script automatically runs the python code, print the results, plot the figures, and save them in the ```./figs``` directory. The sample output printed for the case with 95% load should be as following:
 
@@ -146,7 +146,7 @@ elephant of size, 26, 23, 3, 11.538461538461538, 0.1281168424240001, 0.099837621
 background,6756, 6483, 4350, 64.38721136767317, 0.21480590182277562, 9.787215050001699e-05, 0.000991770092799904, 0.0015462912245001181, 0.8771840705405998, 3.226393756749811, 4.4459843776404275
 Queries, 0, 17500, 249, 1.4228571428571428, 3.5943158852147263, 2.5490543232758, 2.9075970346794, 3.736700805329, 4.6175067445566, 4.8243148405168, 4.926462310074928
 
-4,spines,8,aggs,40,servers,1,burstyapps,1,mice,40,reqPerBurst,19.75,bgintermult,0.071,burstyintermult,250,ttl,2,rndfwfactor,2,rndbouncefactor,20000,incastfsize,0.00120,mrktimer,0.00120,ordtimer,0,rep,dctcp,valinor.csv
+4,spines,8,aggs,40,servers,1,burstyapps,1,mice,40,reqPerBurst,19.75,bgintermult,0.071,burstyintermult,250,ttl,2,rndfwfactor,2,rndbouncefactor,20000,incastfsize,0.00120,mrktimer,0.00120,ordtimer,0,rep,dctcp,vertigo.csv
 type,requested, started, finished, %Flow Completion, mean, p10, p20, p50, p90, p99, p99.9
 all,706760, 594809, 526221, 74.45540211670156, 0.8788331791513427, 0.674342980587, 0.676776130346, 0.7723981464309999, 1.465001677253, 2.6333061684715995, 3.3946427234425602
  mice of size, 3294, 3293, 3293, 99.96964177292045, 0.00035123916248010423, 5.622321540017519e-05, 8.739019179988538e-05, 0.0001052160000001301, 0.00016321909359986455, 0.000545883972520001, 0.001543906542167682
@@ -157,15 +157,15 @@ background,6760, 4546, 4137, 61.19822485207101, 0.06456373631608628, 7.340362440
 Queries, 0, 17500, 8005, 45.74285714285714, 1.6087287174550076, 0.7711473605348, 0.7731677268893999, 0.8809048311120002, 2.6367102924524, 3.3964733290294, 3.5918592925148682
 ```
 
-The results above illustrate that, under 95% load, ECMP, DRILL, and DIBS complete 6.77%, 6.69%, and 1.42% of the querries, respectively, while Valinor completes 45.74%.
+The results above illustrate that, under 95% load, ECMP, DRILL, and DIBS complete 6.77%, 6.69%, and 1.42% of the querries, respectively, while Vertigo completes 45.74%.
 
 
 **Viewing the figures**
 
 To view the plotted figures for small simulations, `Jupyter notebook` is required. To install Jupyter using pip simply issue:
- `pip install jupyterlab`. The notebook file is located in `Omnet_Sims/dc_simulations/simulations/Valinor_Sims/`. To view the notebook in your browser, run:
+ `pip install jupyterlab`. The notebook file is located in `Omnet_Sims/dc_simulations/simulations/Vertigo_Sims/`. To view the notebook in your browser, run:
  
- ` jupyter Omnet_Sims/dc_simulations/simulations/Valinor_Sims/result_illustrator.ipynb`
+ ` jupyter Omnet_Sims/dc_simulations/simulations/Vertigo_Sims/result_illustrator.ipynb`
  
  You can optionally use `--ip x.x.x.x` flag on a public server machine, where x.x.x.x is the public ip address of the server.
  The notebook compares the small scale simulation results with the large-scale results reported in the main paper.
@@ -173,7 +173,7 @@ To view the plotted figures for small simulations, `Jupyter notebook` is require
 
 **Running large-scale simulations**
 
-The config files for large scale simulations can be used for evaluating Valinor, DIBS, ECMP, and DRILL while using TCP, DCTCP, and Swift as the transport protocol. Every scenario with these configurations takes 2 to 3 weeks to complete. To run the large scale simulations, first make sure that you are in the right directory ("valinor_simulations/Omnet_Sims/dc_simulations/simulations/Valinor_Sims") and then run the following command to download the distribution files:
+The config files for large scale simulations can be used for evaluating Vertigo, DIBS, ECMP, and DRILL while using TCP, DCTCP, and Swift as the transport protocol. Every scenario with these configurations takes 2 to 3 weeks to complete. To run the large scale simulations, first make sure that you are in the right directory ("vertigo_simulations/Omnet_Sims/dc_simulations/simulations/Vertigo_Sims") and then run the following command to download the distribution files:
 
 ```
 bash download_dist_files.sh
@@ -193,8 +193,8 @@ After the distribution files are downloaded, you can use the provided bash scrip
   * run_80_constant_dburstiness.sh (uses ```omnetpp_80_constant_dburstiness.ini```)
 * **Fat-tree topology under different arrival rates and 50% background load**
   * run_fattree.sh (uses ```omnetpp_fattree.ini```)
-* **Component analysis: effect of boosting factor in Valinor's performance (boosting factor = 0, 2, 4, 8)**
+* **Component analysis: effect of boosting factor in Vertigo's performance (boosting factor = 0, 2, 4, 8)**
   * run_boosting.sh (uses ```boosting.ini```)
-* **Component analysis: effect of SRPT scheduling, packet deflection, and ordering component in Valinor's performance**
+* **Component analysis: effect of SRPT scheduling, packet deflection, and ordering component in Vertigo's performance**
   * run_deflection_and_ordering.sh (uses ```deflection_and_ordering.ini```)
 
