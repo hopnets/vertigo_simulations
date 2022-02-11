@@ -22,6 +22,7 @@ sudo apt-get install -y zlib1g-dev
 sudo apt-get install -y libxml2-dev
 sudo apt install -y sqlite3
 sudo apt-get install -y libsqlite3-dev
+sudo apt-get install -y zip unzip
 ```
 
 Make sure you have python3 installed (if not, run ```sudo apt-get install -y python3```). If it is installed and accessible in "/usr/bin/python3" run the following: 
