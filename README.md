@@ -88,7 +88,7 @@ We have provided bash scripts for running both these sets and extracting their r
 
 ```
 cd dc_simulations/simulations/Vertigo_Sims
-bash download_dist_files_1g.sh
+bash download_dist_files.sh
 bash run_simple_1g.sh 
 ```
 
